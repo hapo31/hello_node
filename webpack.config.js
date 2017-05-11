@@ -3,8 +3,9 @@ const { HotModuleReplacementPlugin } = require('webpack');
 module.exports = {
     entry: "./src/index.js", // プログラムのエントリーポイント
     output: {
-        path: __dirname, // ファイルの出力先
-        filename: "dist/app.bundle.js" // 生成するファイル名
+        path: __dirname + "/", // ファイルの出力先
+        filename: "app.bundle.js", // 生成するファイル名
+        publicPath: "dist/"
     },
     devtool: "source-map",
     module: {
